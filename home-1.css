@@ -12,7 +12,6 @@ header {
     background-position: center center;
     background-size: cover;
     height: 90vh;
-    mix-blend-mode: overlay;
     opacity: 1;
     width: 100%;
 }
@@ -129,7 +128,6 @@ ul {
     background-image: url(./img/fondo\ cesped.jpg);
     opacity: 0.9;
     padding: 0px 15px;
-    
 }
 
 .section-1 {
@@ -149,7 +147,7 @@ ul {
     width: 70%;
     border: 10px solid #fff;
     border-top: 0;
-    height: 450px
+    height: 450px;
 }
 
 .title {
@@ -178,6 +176,7 @@ ul {
     transform: translateX(25%);
     color: #fff;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .description.scrolled {
@@ -413,8 +412,8 @@ h4 {
 
 .button {
     background-color: #ffffff;
-    width: 1em;
-    height: 1em;
+    width: 1.1em;
+    height: 1.1em;
     border-radius: 50%;
     margin: 0.2em 0.5em;
     -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.82);
@@ -423,11 +422,13 @@ h4 {
 }
 
 .button.active {
-    background-color: rgba(71, 79, 241, 0.856);
+    background-image: url(./img/Dibujo\ para\ colorear\ Pelota\ de\ fútbol1.jfif);
+    background-size: cover;
+    padding: 0px;
 }
 
 .section-4 {
-    padding: 0px 10px;
+    padding: 0px 10px 50px 10px;
     display: flex;
     flex-direction: column;
     background-image: url(./img/fondo\ cesped.jpg);
@@ -438,7 +439,7 @@ h4 {
 }
 
 .title-section-4 {
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 80px;
     display: flex;
     flex-direction: row;
