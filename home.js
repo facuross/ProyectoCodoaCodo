@@ -5,7 +5,7 @@ window.addEventListener('scroll', ()=>{
     const circle = document.getElementById('circle')
     const screenSize = window.innerHeight
 
-    if (circle.getBoundingClientRect().top < screenSize + 250) {
+    if (circle.getBoundingClientRect().top < screenSize + 50) {
         circle.classList.add('scrolled')
     } else {
         circle.classList.remove('scrolled')
@@ -27,7 +27,7 @@ const button = document.querySelectorAll('.button');
 const rightArrow = document.querySelector('.right-arrow');
 const leftArrow = document.querySelector('.left-arrow');
 var counter = 0
-
+console.log(button)
 button.forEach((punto, i) => {
     button[i].addEventListener('click', () => {
 

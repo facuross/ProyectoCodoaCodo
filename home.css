@@ -126,7 +126,7 @@ ul {
 
 .margin {
     background-image: url(./img/fondo-final.jpg);
-    mix-blend-mode: overlay;
+    mix-blend-mode:darken;
     padding: 0px 15px;
 }
 
@@ -401,8 +401,8 @@ h4 {
 
 .button {
     background-color: #ffffff;
-    width: 1.1em;
-    height: 1.1em;
+    width: 1.15em;
+    height: 1.15em;
     border-radius: 50%;
     margin: 0.2em 0.5em;
     -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.82);

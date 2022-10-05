@@ -146,9 +146,16 @@ ul {
 }
 
 .filter-options {
-    height: 100%;
+    height: 50px;
     margin: 0;
     padding: 0;
+    margin-left: 5px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
+#option {
     margin-left: 5px;
 }
 
@@ -165,6 +172,7 @@ ul {
 
 .filter-options.show > ul {
     display: block;
+    margin-top: 380px;
 }
 
 
@@ -217,7 +225,6 @@ input {
     border-radius: 5px;
     height: 25px;
     width: 200px;
-    
 }
 
 .cancha-info {
@@ -232,6 +239,10 @@ input {
     background-color: #ffffff;
     box-shadow: rgb(0 0 0 / 30%) 0px 2px 8px 0px;
     transition: all 300ms;
+}
+
+.apply-filter {
+    display:none;
 }
 
 .cancha-info:hover {

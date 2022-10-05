@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="canchas.css">
     <script src="https://kit.fontawesome.com/b01e67490c.js" crossorigin="anonymous"></script>
-    <script src="canchas.js"></script>
+    
     <title>Document</title>
 </head>
 
@@ -40,16 +40,17 @@
             <div class="filter">
                 <i class="fa-solid fa-filter"></i>
                 <p style="font-size:15px; margin-left:5px">Filtrar por:</p>
-                <div class="filter-options" id="filter">
-                    <ul>
-                        <li class="values selected" value="">Todas</li>
-                        <li class="values" value="">Futbol 11</li>
-                        <li class="values" value="">Futbol 7</li>
-                        <li class="values" value="">Futbol 5</li>
-                        <li class="values" value="">Abiertas</li>
-                        <li class="values" value="">Cerradas</li>
-                        <li class="values" value="">Cesped sintetico</li>
-                        <li class="values" value="">Cesped natural</li>
+                <div class="filter-options">
+                    <span id="option">Todas</span>
+                    <ul id="list">
+                        <li class="values selected">Todas</li>
+                        <li class="values">Futbol 11</li>
+                        <li class="values">Futbol 7</li>
+                        <li class="values">Futbol 5</li>
+                        <li class="values">Abierta</li>
+                        <li class="values">Cerrada</li>
+                        <li class="values">Cesped sintetico</li>
+                        <li class="values">Cesped natural</li>
                     </ul>
                 </div>
             </div>
@@ -61,8 +62,8 @@
             <div class="picture">
                 <img src="./img/Canchas/cancha1.jpg" alt="cancha-1">
             </div>
-            <div class="description" id="futbol-11">
-                <h2>Cancha N° 1</h2>
+            <div class="description">
+                <h2>Cancha Futbol 11</h2>
                 <p>Cantidad de Judadores: 11</p>
                 <p>Tipo de piso: Cesped natural</p>
                 <p>Infraestructura: Abierta. Con Luz</p>
@@ -92,12 +93,12 @@
                 </div>
             </div>
         </div>
-        <div class="cancha-info" id="futbol-11">
+        <div class="cancha-info">
             <div class="picture">
                 <img src="./img/Canchas/cancha2.jpg" alt="cancha-2">
             </div>
             <div class="description">
-                <h2>Cancha N° 2</h2>
+                <h2>Cancha Futbol 11</h2>
                 <p>Cantidad de Judadores: 11</p>
                 <p>Tipo de piso: Cesped natural</p>
                 <p>Infraestructura: Abierta. Con Luz</p>
@@ -132,7 +133,7 @@
                 <img src="./img/Canchas/cancha3.jfif" alt="cancha-2">
             </div>
             <div class="description">
-                <h2>Cancha N° 3</h2>
+                <h2>Cancha Futbol 7</h2>
                 <p>Cantidad de Judadores: 7</p>
                 <p>Tipo de piso: Cesped sintetico</p>
                 <p>Infraestructura: Abierta. Con Luz</p>
@@ -163,7 +164,7 @@
                 <img src="./img/Canchas/cancha4.jpg" alt="cancha-2">
             </div>
             <div class="description">
-                <h2>Cancha N° 4</h2>
+                <h2>Cancha Futbol 7</h2>
                 <p>Cantidad de Judadores: 7</p>
                 <p>Tipo de piso: Cesped sintetico</p>
                 <p>Infraestructura: Cerrada. Con Luz</p>
@@ -194,7 +195,7 @@
                 <img src="./img/Canchas/cancha5.jpg" alt="cancha-2">
             </div>
             <div class="description">
-                <h2>Cancha N° 5</h2>
+                <h2>Cancha Futbol 5</h2>
                 <p>Cantidad de Judadores: 5</p>
                 <p>Tipo de piso: Cesped sintetico</p>
                 <p>Infraestructura: Cerrada. Con Luz</p>
@@ -225,7 +226,7 @@
                     <img src="./img/Canchas/cancha6.jpg" alt="cancha-2">
                 </div>
                 <div class="description">
-                    <h2>Cancha N° 6</h2>
+                    <h2>Cancha Futbol 5</h2>
                     <p>Cantidad de Judadores: 5</p>
                     <p>Tipo de piso: Cesped sintetico</p>
                     <p>Infraestructura: Abierta. Con Luz</p>
@@ -253,4 +254,5 @@
             </div>
         </div>
 </body>
+<script src="canchas.js"></script>
 </html>
