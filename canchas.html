@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header&footer.css">
     <link rel="stylesheet" href="canchas.css">
     <script src="https://kit.fontawesome.com/b01e67490c.js" crossorigin="anonymous"></script>
-    
+
     <title>Document</title>
 </head>
 
@@ -16,17 +17,17 @@
         <nav>
             <div class="nav-bar">
                 <span class="logo">
-                    Logo
+                    <img src="./img/Logo/Logo fondo blanco.png" style="height: 80px; width:200px" alt="logo">
                 </span>
                 <ul class="nav">
                     <li class="menu">
-                        <a class="item" href="">Home</a>
+                        <a class="item" href="./home.html">Home</a>
                     </li>
                     <li class="menu">
-                        <a class="item" href="">Canchas</a>
+                        <a class="item" href="./canchas.html">Canchas</a>
                     </li>
                     <li class="menu">
-                        <a class="item" href="">Novedades</a>
+                        <a class="item" href="./novedades.html">Noticias</a>
                     </li>
                     <li class="menu">
                         <a class="item" href="">Contacto</a>
@@ -38,10 +39,10 @@
     <div class="contenedor">
         <div class="search-bar">
             <div class="filter">
-                <i class="fa-solid fa-filter"></i>
+                <i class="fa-solid fa-filter" style="color:#00926A"></i>
                 <p style="font-size:15px; margin-left:5px">Filtrar por:</p>
                 <div class="filter-options">
-                    <span id="option">Todas</span>
+                    <span id="option">Todas</span><i class="fa-solid fa-angle-down" id="arrow"></i>
                     <ul id="list">
                         <li class="values selected">Todas</li>
                         <li class="values">Futbol 11</li>
@@ -68,7 +69,7 @@
                 <p>Tipo de piso: Cesped natural</p>
                 <p>Infraestructura: Abierta. Con Luz</p>
                 <br>
-                <hr>
+                <hr class="card">
                 <h3>Servicios Incluidos</h3>
                 <ul class="icons">
                     <li>
@@ -103,7 +104,7 @@
                 <p>Tipo de piso: Cesped natural</p>
                 <p>Infraestructura: Abierta. Con Luz</p>
                 <br>
-                <hr>
+                <hr class="card">
                 <h3>Servicios Incluidos</h3>
                 <ul class="icons">
                     <li>
@@ -138,7 +139,7 @@
                 <p>Tipo de piso: Cesped sintetico</p>
                 <p>Infraestructura: Abierta. Con Luz</p>
                 <br>
-                <hr>
+                <hr class="card">
                 <h3>Servicios Incluidos</h3>
                 <ul class="icons">
                     <li>
@@ -169,7 +170,7 @@
                 <p>Tipo de piso: Cesped sintetico</p>
                 <p>Infraestructura: Cerrada. Con Luz</p>
                 <br>
-                <hr>
+                <hr class="card">
                 <h3>Servicios Incluidos</h3>
                 <ul class="icons">
                     <li>
@@ -200,7 +201,7 @@
                 <p>Tipo de piso: Cesped sintetico</p>
                 <p>Infraestructura: Cerrada. Con Luz</p>
                 <br>
-                <hr>
+                <hr class="card">
                 <h3>Servicios Incluidos</h3>
                 <ul class="icons">
                     <li>
@@ -221,38 +222,57 @@
                 </div>
             </div>
         </div>
-            <div class="cancha-info">
-                <div class="picture">
-                    <img src="./img/Canchas/cancha6.jpg" alt="cancha-2">
-                </div>
-                <div class="description">
-                    <h2>Cancha Futbol 5</h2>
-                    <p>Cantidad de Judadores: 5</p>
-                    <p>Tipo de piso: Cesped sintetico</p>
-                    <p>Infraestructura: Abierta. Con Luz</p>
-                    <br>
-                    <hr>
-                    <h3>Servicios Incluidos</h3>
-                    <ul class="icons">
-                        <li>
-                            <i class="fa-solid fa-shower fa-lg" style="color: #00926A"></i>
-                            <p> Duchas </p>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-square-parking fa-lg" style="color: #00926A"></i>
-                            <p> Estacionamiento</p>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-utensils fa-lg" style="color: #00926A"></i>
-                            <p> Parrilla</p>
-                        </li>
-                    </ul>
-                    <div class="button">
-                        <button>Reservar</button>
-                    </div>
+        <div class="cancha-info">
+            <div class="picture">
+                <img src="./img/Canchas/cancha6.jpg" alt="cancha-2">
+            </div>
+            <div class="description">
+                <h2>Cancha Futbol 5</h2>
+                <p>Cantidad de Judadores: 5</p>
+                <p>Tipo de piso: Cesped sintetico</p>
+                <p>Infraestructura: Abierta. Con Luz</p>
+                <br>
+                <hr class="card">
+                <h3>Servicios Incluidos</h3>
+                <ul class="icons">
+                    <li>
+                        <i class="fa-solid fa-shower fa-lg" style="color: #00926A"></i>
+                        <p> Duchas </p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-square-parking fa-lg" style="color: #00926A"></i>
+                        <p> Estacionamiento</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-utensils fa-lg" style="color: #00926A"></i>
+                        <p> Parrilla</p>
+                    </li>
+                </ul>
+                <div class="button">
+                    <button>Reservar</button>
                 </div>
             </div>
         </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="social-media">
+                <hr class="foot">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook fa-xl"></i>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <i class="fa-brands fa-youtube fa-xl"></i>
+                    <i class="fa-brands fa-twitter fa-xl"></i>
+                    <i class="fa-brands fa-whatsapp fa-xl"></i>
+                </div>
+                <hr class="foot">
+            </div>
+            <div class="footer-info">
+                <span>AVISO LEGAL | POLITICAS DE PRIVACIDAD</span>
+                <p>Copyright © 2022.Todos los derechos reservados. Buenos Aires, Argentina</p>
+            </div>
+    </footer>
 </body>
 <script src="canchas.js"></script>
+
 </html>

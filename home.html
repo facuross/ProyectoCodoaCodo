@@ -7,39 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="header&footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Oleo+Script&family=Oswald:wght@500;600;700&family=Roboto+Mono:wght@300&family=Roboto:wght@100;300;500&display=swap&family=Asap:ital,wght@1,500&display=swap&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script defer src="./home.js"></script>
+    <script defer src="./navbar.js"></script>
     <script src="https://kit.fontawesome.com/b01e67490c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
     <header>
-        <nav>
+        <nav class="prueba">
             <div class="nav-bar">
                 <span class="logo">
-                    Logo
+                    <img src="./img/Logo/Logo blanco sin fondo.png" alt="logo" style="height: 80px; width:200px">
                 </span>
                 <ul class="nav">
                     <li class="menu">
-                        <a class="item" href="">Home</a>
+                        <a class="item" href="./home.html">Home</a>
                     </li>
                     <li class="menu">
                         <a class="item" href="./canchas.html">Canchas</a>
                     </li>
                     <li class="menu">
-                        <a class="item" href="">Novedades</a>
+                        <a class="item" href="./novedades.html">Noticias</a>
                     </li>
                     <li class="menu">
                         <a class="item" href="">Contacto</a>
                     </li>
                 </ul>
+                <i id="menu-icon" class="fa-solid fa-bars fa-2xl"></i>
             </div>
         </nav>
     </header>
     <div class="margin">
         <section class="section-1">
             <div class="content">
-                <h1 class="title">Sobre Nosotros</h1>
+                <h1 class="title">
+                    <span class="about">
+                        SOBRE
+                    </span>
+                    <span class="us">
+                        NOSOTROS
+                    </span>
+                </h1>
                 <div class="description">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae natus itaque totam iusto illo
                         debitis.
@@ -63,8 +78,8 @@
         </div>
         <section class="section-2">
             <div class="title-container">
-                <h1 class="section-title">DESTACADOS DE LA SEMANA</h1>
-                <h3 class="section-subtitle">Mantenete informado de todas nuestras novedades. Hace click en la imágen
+                <h1 class="section-title"><font color="#dfc13f">DESTACADOS</font> DE LA SEMANA</h1>
+                <h3 class="section-subtitle">Mantenete informado de todas nuestras novedades. <font color="#dfc13f">Hace click</font> en la imágen
                     para ver la nota completa.</h3>
             </div>
             <div class="carrousel-container">
@@ -129,7 +144,7 @@
         </section>
         <section class="section-4">
             <div class="title-section-4">
-                <h1>UBICACION DE NUESTRAS INSTALACIONES</h1>
+                <h1>UBICACION DE NUESTRAS <font color="#dfc13f">INSTALACIONES</font></h1>
             </div>
             <div class="info-container">
                 <div class="info">
@@ -157,10 +172,10 @@
         <section class="section-3">
             <div class="circle" id="circle">
                 <div class="right">
-                    <h1>¿Querés participar con tu equipo en el próximo torneo?</h1>
+                    <h1 id="text-1">¿Querés participar con tu equipo en el próximo torneo?</h1>
                 </div>
                 <div class="left">
-                    <h1>Contactanos y reserva un cupo</h1>
+                    <h1 id="text-2">¡Contactanos y reserva un cupo!</h1>
                 </div>
                 <div class="center">
                     <button></button>
@@ -171,7 +186,7 @@
     <footer>
         <div class="footer">
             <div class="social-media">
-                <hr>
+                <hr class="foot">
                 <div class="icons">
                     <i class="fa-brands fa-facebook fa-xl"></i>
                     <i class="fa-brands fa-instagram fa-xl"></i>
@@ -179,11 +194,11 @@
                     <i class="fa-brands fa-twitter fa-xl"></i>
                     <i class="fa-brands fa-whatsapp fa-xl"></i>
                 </div>
-                <hr>
+                <hr class="foot">
             </div>
             <div class="footer-info">
-                <span>AVISO LEGAL | POLITICAS DE PRIVACIDAD</span>
-                <p>Copyright © 2022.Todos los derechos reservados. Buenos Aires, Argentina</p>
+                <span class="legal">AVISO LEGAL | POLITICAS DE PRIVACIDAD</span>
+                <p class="copyright">Copyright © 2022.Todos los derechos reservados. Buenos Aires, Argentina</p>
             </div>
     </footer>
 </body>

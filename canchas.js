@@ -4,11 +4,13 @@ const option = document.getElementById("option");
 const value = document.querySelectorAll(".values")
 const info = document.querySelectorAll(".description")
 const card = document.querySelectorAll(".cancha-info")
-
+const arrow = document.getElementById("arrow")
 
 //desplegar menu filtro
 filter[0].onclick = () => {
     filter[0].classList.toggle("show")
+    arrow.classList.toggle("flip")
+    
 }
 
 //evento para seleccionar la opcion dentro del menu
@@ -20,12 +22,11 @@ value.forEach((valor, i) => {
         value[i].classList.add("selected")
         option.innerHTML = value[i].innerHTML
         let filterSelected = document.querySelector(".selected")
-        console.log(filterSelected.innerHTML)
         filtro(filterSelected)
     })
 })
 
-
+//función para buscar coincidencia entre el texto del filtro y la descripción de la tarjeta
 function filtro(filter){
 info.forEach((e, i) => {
     if (info[i].textContent.includes(filter.innerHTML)) {
@@ -36,6 +37,5 @@ info.forEach((e, i) => {
     else {
         card[i].classList.add("apply-filter")
     }
-    console.log(info[i].textContent)
 })
 }

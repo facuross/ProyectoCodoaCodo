@@ -3,12 +3,18 @@ window.addEventListener('scroll', ()=>{
     const title = document.querySelector('.title')
     const description = document.querySelector('.description')
     const circle = document.getElementById('circle')
+    const p1 = document.getElementById('text-1')
+    const p2 = document.getElementById('text-2')
     const screenSize = window.innerHeight
 
     if (circle.getBoundingClientRect().top < screenSize + 50) {
         circle.classList.add('scrolled')
+        setTimeout(()=> p1.classList.add('scrolled'), 1000)
+        setTimeout(()=> p2.classList.add('scrolled'), 2500)
     } else {
         circle.classList.remove('scrolled')
+        p1.classList.remove('scrolled')
+        p2.classList.remove('scrolled')
     }
 
     if (title.getBoundingClientRect().top < screenSize ) {
