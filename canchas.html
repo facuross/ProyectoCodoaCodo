@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Oleo+Script&family=Oswald:wght@500;600;700&family=Roboto+Mono:wght@300&family=Roboto:wght@100;300;500&display=swap&family=Asap:ital,wght@1,500&display=swap&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="header&footer.css">
     <link rel="stylesheet" href="canchas.css">
     <script src="https://kit.fontawesome.com/b01e67490c.js" crossorigin="anonymous"></script>
-
+    <script defer src="./navbar.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="prueba">
             <div class="nav-bar">
                 <span class="logo">
-                    <img src="./img/Logo/Logo fondo blanco.png" style="height: 80px; width:200px" alt="logo">
+                    <img src="./img/Logo/Logo negro .png" style="height: 80px; width:200px" alt="logo">
                 </span>
                 <ul class="nav">
                     <li class="menu">
@@ -33,6 +36,7 @@
                         <a class="item" href="">Contacto</a>
                     </li>
                 </ul>
+                <i id="menu-icon" class="fa-solid fa-bars fa-2xl"></i>
             </div>
         </nav>
     </header>
@@ -40,7 +44,7 @@
         <div class="search-bar">
             <div class="filter">
                 <i class="fa-solid fa-filter" style="color:#00926A"></i>
-                <p style="font-size:15px; margin-left:5px">Filtrar por:</p>
+                <p style="font-size:14px; margin-left:5px">Filtrar por:</p>
                 <div class="filter-options">
                     <span id="option">Todas</span><i class="fa-solid fa-angle-down" id="arrow"></i>
                     <ul id="list">
@@ -56,8 +60,11 @@
                 </div>
             </div>
             <div class="search">
-                <input type="text" placeholder=" Buscar..." autocomplete="off">
+                <input id="buscador" type="text" placeholder=" Buscar..." autocomplete="off">
             </div>
+        </div>
+        <div class="not-found">
+            <p>No se encontraron resultados para su búsqueda</p>
         </div>
         <div class="cancha-info">
             <div class="picture">

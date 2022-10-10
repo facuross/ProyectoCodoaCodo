@@ -13,6 +13,11 @@ h1 {
     font-size: 2.5rem;
 }
 
+.logo-img {
+    height: 80px;
+    width:200px
+}
+
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -88,6 +93,7 @@ ul {
     align-items: center;
     display: flex;
     color: #fff;
+    font-size: 14px;
 }
 
 .menu::before,
@@ -230,5 +236,14 @@ ul {
         justify-content: space-around;
         margin: 0;
         width: 100%;
+    }
+
+    .logo-img {
+        height: 60px;
+        width: 150px;
+    }
+
+    .logo {
+        margin-left: 20px;
     }
 }

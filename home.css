@@ -10,9 +10,9 @@ body {
 header {
     background-image: url(img/1.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top 35% center;
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
     opacity: 1;
     width: 100%;
 }
@@ -38,7 +38,7 @@ header {
     width: 70%;
     border: 10px solid #fff;
     border-top: 0;
-    height: 500px;
+    height: 450px;
 }
 
 .title {
@@ -49,7 +49,7 @@ header {
     transform: translateX(-25%);
     color: #fff;
     font-size: 1.8rem;
-    color: #dfc13f;
+    color: #E8E269;
 }
 
 .about {
@@ -157,8 +157,8 @@ header {
 
 #text-1, #text-2 {
     opacity: 0;
-    font-size: 2.5rem;
-    background-image: linear-gradient(45deg,#dfc13f 0%,#dfc13f 35%,#b9e320 85%,#a76c51 100%);
+    font-size: 2.5em;
+    background-image: linear-gradient(45deg,#dfc13f 0%,#dfc13f 35%,#E8E269 85%,#E8E269 100%);
     -webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 }
@@ -242,8 +242,8 @@ header {
 
 .section-subtitle {
     width: 100%;
-    margin: 0px 3em 50px auto;
-    font-size: 1.5em;
+    margin: 30px 3em 80px auto;
+    font-size: 1.2em;
     text-align: center;
 }
 
@@ -326,7 +326,7 @@ h4 {
 }
 
 .button {
-    background-color: #ffffff;
+    background-color: rgb(230, 224, 224);
     width: 1.15em;
     height: 1.15em;
     border-radius: 50%;
@@ -372,7 +372,7 @@ h4 {
     margin-bottom: 10px;
     color: #fff;
     font-size: 1.5rem;
-    color:#dfc13f;
+    color:#E8E269;
 }
 
 .info p {
@@ -395,12 +395,24 @@ h4 {
     justify-content: flex-end;
 }
 
+@media (max-width: 1188px) {
+    #text-1, #text-2 {
+        font-size: 2em;
+    }
+
+    #text-2 {
+        margin-top: 25px;
+        margin-right: 15px;
+    }
+}
+
 @media (max-width: 1042px) {
     .content {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 70%;
+        height: 500px;
     }
 
     .description {
@@ -409,8 +421,12 @@ h4 {
 
     .title {
         margin-top: 10px;
-        margin-left: 5px;
+        margin-left: 0px;
         justify-content: start;
+    }
+
+    .about, .us {
+        margin-left: 5px;
     }
 
     .margin {
@@ -447,6 +463,7 @@ h4 {
     
         #text-1, #text-2 {
             font-size: 1.8em;
+            margin-left: 15px;
         }
     
         .circle {
@@ -456,7 +473,15 @@ h4 {
         
         .news {
             height: 25%;
-            bottom: 5px
+            bottom: 4.5px
+        }
+
+        .news h2 {
+            font-size: 18px;
+        }
+
+        .news h4 { 
+            font-size: 16px;
         }
 }
 
@@ -464,6 +489,10 @@ h4 {
     #text-1, #text-2 {
         font-size: 1.2em;
         margin-top: 0;
+    }
+
+    #text-2 {
+        margin-top: 25px;
     }
 
     .circle {
@@ -478,11 +507,16 @@ h4 {
     .title-section-4 {
         text-align: -webkit-center;
     }
+
+    .carrousel {
+        width: 80%;
+    }
+
 }
 
 @media (max-width: 600px) {
     .news {
-        height: 15%;
+        height: 10%;
     }
 
     .news h4 {
@@ -500,13 +534,10 @@ h4 {
         margin-right: 5px 
     }
 
-    .carrousel {
-        width: 80%;
-    }
-
     header {
         background-size: 100vw 100vh;
     }
+
 }
 
 @media (max-width:492px) {
