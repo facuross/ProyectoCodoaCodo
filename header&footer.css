@@ -181,6 +181,10 @@ ul {
     color: #4b4b4b;
 }
 
+.legal {
+    font-size:14px;
+}
+
 .footer-info p {
     font-size: 13px;
 }

@@ -163,6 +163,7 @@ header {
 	-webkit-background-clip: text;
 }
 
+
 #text-1.scrolled {
     opacity: 1;
     animation: lightSpeedInLeft;
@@ -180,13 +181,16 @@ header {
     flex-flow: row wrap;
     justify-content: center;
     margin-top: 50px;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
 
 .left {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: start;
     margin-top: 0px;
+    margin-left: 20px;
 }
 
 .center {
