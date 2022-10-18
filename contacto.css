@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(30, 26, 26, 0.84);
+    margin-bottom: 80px;
+}
+
+.title {
+    margin: 10px 150px 5px;
+}
+
+form {
+    margin: 80px 150px;
+    width: 60%;
+    align-self: center;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+}
+
+.location {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 0.5fr;
+    column-gap: 50px;
+}
+
+
+
+label {
+    margin-bottom: 10px;
+}
+
+input {
+    margin-bottom: 50px;
+    height: 25px;
+    border-radius: 5px;
+    
+}
+
+.dateOptions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 100px;
+}
+
+.bday {
+    margin-bottom: 50px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; 
+}
+
+.month {
+    margin-bottom: 50px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; 
+}
+
+.year {
+    margin-bottom: 50px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; 
+}
+
+#motivo {
+    width: 50%;
+    margin-bottom: 50px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.mensaje {
+    height: 150px;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.radio {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.punto {
+    align-self: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+}   
+
+.button {
+    width: 150px;
+    border: 1px solid blue;
+
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+}

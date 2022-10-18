@@ -51,20 +51,25 @@ const response = fetch('https://api.openweathermap.org/data/2.5/weather?id=34339
     const date = document.querySelector(".date")
     const city = document.querySelector(".city")
     const temp = document.querySelector(".temp")
+    const max = document.querySelector(".max")
+    const min = document.querySelector(".min")
     const description = document.querySelector(".description")
     const background = document.querySelector(".background")
 
     console.log(data.name)
     date.textContent = dia
     city.textContent = data.name.slice(0, data.name.indexOf("F")) + ", Argentina"
-    temp.textContent = data.main.temp + "°C";
+    temp.textContent = Math.round(data.main.temp) + "°C";
+    max.textContent = "Max.:" + " " + Math.round(data.main.temp_max) + "°C"
+    min.textContent = "Min.:" + " " + Math.round(data.main.temp_min) + "°C"
     description.textContent = data.weather[0].description[0].toUpperCase() + data.weather[0].description.slice(1)
     
     //Icono del clima
     const icon = data.weather[0].icon
-    console.log(icon)
 
     
+    
+
     if (icon === '01d' || icon === '02d') {
         background.src = "/img/Clima/clearSky.mp4"
     } else if( icon === '01n' || icon === '02n'){
@@ -72,14 +77,20 @@ const response = fetch('https://api.openweathermap.org/data/2.5/weather?id=34339
         date.style.color = "#fff"
         city.style.color = "#fff"
         temp.style.color = "#fff"
+        max.style.color = "#fff"
+        min.style.color = "#fff"
         description.style.color = "#fff"
-    } else if ( icon === '03d' || icon === '04d') {
+    } else if ( icon === '03d') {
+        background.src = "/img/Clima/parcialmenteNublado.mp4"
+    } else if ( icon === '04d') {
         background.src = "/img/Clima/nublado.mp4"
     } else if ( icon === '03n' || icon === '04n' ) {
         background.src = "/img/Clima/nubladonoche.mp4"
         date.style.color = "#fff"
         city.style.color = "#fff"
         temp.style.color = "#fff"
+        max.style.color = "#fff"
+        min.style.color = "#fff"
         description.style.color = "#fff"
     } else if ( icon === '09d' || icon === '09n' || icon === '10n' || icon === '10d' ) {
         background.src = "/img/Clima/llovizna.mp4"
