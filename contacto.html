@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="contacto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap&family=Oswald:wght@500;600;700" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b01e67490c.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
@@ -19,7 +19,7 @@
         <nav class="prueba">
             <div class="nav-bar">
                 <span class="logo">
-                    <img class="logo-img" src="./img/Logo/logo final fondo blanco.png" alt="logo">
+                    <img class="logo-img" src="./img/Logo/Logo negro .png" alt="logo">
                 </span>
                 <ul class="nav">
                     <li class="menu">
@@ -40,55 +40,59 @@
         </nav>
     </header>
 
-    <h2 class="title">¡Contactanos!</h2>
-    <h2 class="title">Completa el formulario con tus datos y envianos tu consulta</h2>
-
+    
+<div class="content">
+    <div class="side">
+        <img src="./img/Contacto/descarga1.jfif" alt="">
+    </div>
     <form name="form">
+        <h1 class="title">¡Contactanos!</h1>
+        <h2 class="title">Completa el formulario con tus datos y envianos tu consulta</h2>
         <div class="personal">
             <div class="name">
-                <label for="Nombre">Nombre</label> <input type="text" name="Nombre" 
-                    id="name">
+                <label for="name">Nombre</label> 
+                <input type="text" name="name" id="name">
+                <span class="name-error error"></span>
             </div>
             <div class="lastName">
-                <label for="Apellido">Apellido</label> <input type="text" name="Apellido"
-                id="apellido">
+                <label for="apellido">Apellido</label> 
+                <input type="text" name="apellido" id="apellido">
+                <span class="lastname-error error"></span>
             </div>
         </div>
         <div class="location">
             <div class="adress">
-                <label for="Dirección">Dirección</label> <input type="text" name="Dirección"
-                    id="direccion">
+                <label for="domicilio">Domicilio</label> 
+                <input type="text" name="domicilio" id="domicilio">
+                <span class="adress-error error" style="font-size:12px"></span>
             </div>
             <div class="city">
-                <label for="ciudad">Localidad</label> <input type="text" name="Ciudad"
-                    id="ciudad">
+                <label for="ciudad">Localidad</label>
+                <input type="text" name="ciudad" id="ciudad">
+                <span class="city-error error" style="font-size:12px"></span>
             </div>
             <div class="cp">
-                <label for="CP">CP</label> <input type="text" name="CP">
+                <label for="cp">CP</label> 
+                <input type="number" name="cp" id="cp">
+                <span class="cp-error error"></span>
             </div>
         </div>
-        <div class="birthDate">
+        <div class="birthDate" style="margin-bottom:50px;">
             <label for="Fecha de nacimiento">Fecha de nacimiento</label>
             <div class="dateOptions">
-            <select class="bday"></select>
-            <select class="month">
-                <option value="">ene</option>
-                <option value="">feb</option>
-                <option value="">mar</option>
-                <option value="">abr</option>
-                <option value="">may</option>
-                <option value="">jun</option>
-                <option value="">jul</option>
-                <option value="">ago</option>
-                <option value="">sep</option>
-                <option value="">oct</option>
-                <option value="">nov</option>
-                <option value="">dic</option>
+            <select class="bday" id="bday">
+                <option selected="true" disabled="disabled">Día</option>
             </select>
-            <select class="year"></select>
+            <select class="month" id="month">
+                <option selected="true" disabled="disabled">Mes</option>
+            </select>
+            <select class="year" id="year">
+                <option selected="true" disabled="disabled">Año</option>
+            </select>
+            </div>
+        <span class="date-error error"></span>
         </div>
-        </div>
-        <div>
+        <div style="margin-bottom: 50px;">
             <label>Motivo de contacto</label>
             <select id="motivo">
                 <option>Seleccionar</option>
@@ -98,23 +102,33 @@
                 <option>Afiliación</option>
                 <option>Otro</option>
             </select>
+            <span class="motive-error error"></span>
         </div>
-        <p>Genero</p>
+        <label>Genero</label>
         <div class="radio">
-            <input class="punto" type="radio" name="género" value="hombre" checked><label for="hombre">Hombre</label>
-            <input class="punto" type="radio" name="género" value="Mujer"><label for="mujer">Mujer</label>
-            <input class="punto" type="radio" name="género" value="Otro"><label for="otro">Otro</label>
+            <span>
+                <label class="gender" for="hombre">Hombre</label>
+                <input class="punto" type="radio" name="género" value="hombre" checked>
+            </span>
+            <span>
+                <label class="gender" for="mujer">Mujer</label>
+                <input class="punto" type="radio" name="género" value="Mujer">
+            </span>
+            <span>
+                <label class="gender" for="personalizado">Personalizado</label>
+                <input class="punto" type="radio" name="género" value="personalizado">
+            </span>    
         </div>
-        <div style="margin-top:50px">
+        <div style="margin-top:40px">
             <label>Escribinos tu consulta</label>
             <textarea class="mensaje" placeholder="Escribir mensaje..."></textarea>
         </div>
-        <p class="error"></p>
         <div class="buttons">
-            <input class="button" type="button" value="Enviar" onclick="validar()"></input>
-            <input class="button" type="reset" value="Limpiar"></input>
+            <input class="button" type="reset" style="background-color:#1772EA" value="Limpiar" onclick="limpiar()"></input>
+            <input class="button" type="button" style="background-color:#00B04B" value="Enviar" onclick="validar()"></input>
         </div>
     </form>
+</div>
     <footer>
         <div class="footer">
             <div class="social-media">

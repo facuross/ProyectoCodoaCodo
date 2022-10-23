@@ -133,11 +133,10 @@ ul {
 .footer {
     background-color: #202020;
     width: 100%;
-    padding: 2.5em;
     display: grid;
     grid-template-rows: 1fr 1fr;
     margin: 0;
-    padding: 20px 0 10px 0;
+    padding-top: 10px;
     position: absolute;
 }
 

@@ -1,21 +1,63 @@
 body {
-    margin: 0;
+    margin: 0; 
+    background: #E8E269;
 }
 
 nav {
     width: 100%;
-    background-color: rgba(30, 26, 26, 0.84);
+    background-color: #ffffff;
+    box-shadow: rgb(0 0 0 / 30%) 0px 2px 8px 0px;
     margin-bottom: 80px;
 }
 
+.logo {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+    margin-left: 5em;
+    color: rgb(5, 5 ,5);
+}
+
+.item {
+    color: rgb(5, 5, 5);
+}
+
+#menu-icon {
+    color: #000;
+}
+
 .title {
-    margin: 10px 150px 5px;
+    margin: 20px 0px;
+    font-family: 'Oswald', sans-serif;
+}
+
+h2.title {
+    margin-bottom: 50px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    margin: 0px;
+    margin: 50px 75px;
+}
+
+.side {
+    background: #010101;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top-left-radius: 50px;
 }
 
 form {
-    margin: 80px 150px;
-    width: 60%;
+    width: 100%;
     align-self: center;
+    background: rgb(221, 222, 203);
+    padding: 20px 5%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 div {
@@ -27,26 +69,34 @@ div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
+    margin-bottom: 50px;
 }
 
 .location {
-    width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1.5fr 0.5fr;
+    grid-template-columns: 1fr 1fr 100px;
     column-gap: 50px;
-}
-
-
-
-label {
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 input {
-    margin-bottom: 50px;
-    height: 25px;
+    height: 30px;
     border-radius: 5px;
-    
+    border: 1px solid #ccd0d5;
+    background-color: #F5F6F7;
+    padding-left: 10px;
+}
+
+input:focus {
+    border-color: #ccd0d5;
+    outline: none;
+}
+
+label {
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
 }
 
 .dateOptions {
@@ -57,40 +107,54 @@ input {
 }
 
 .bday {
-    margin-bottom: 50px;
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600; 
+    font-weight: 600;
+    border: 1px solid #ccd0d5; 
+    padding: 5px 10px;
 }
 
 .month {
-    margin-bottom: 50px;
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600; 
+    font-weight: 600;
+    border: 1px solid #ccd0d5; 
+    padding: 5px 10px;
 }
 
 .year {
-    margin-bottom: 50px;
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600; 
+    font-weight: 600;
+    border: 1px solid #ccd0d5; 
+    padding: 5px 10px;
 }
 
 #motivo {
     width: 50%;
-    margin-bottom: 50px;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #ccd0d5;
+    padding: 10px 10px;
 }
 
 .mensaje {
-    height: 150px;
-    width: 50%;
+    height: 125px;
+    width: 100%;
     margin-bottom: 50px;
+    border: 1px solid #ccd0d5;
+    background-color: #F5F6F7;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px 10px;
+}
+
+.mensaje:focus {
+    border-color: #ccd0d5;
+    outline: none;
 }
 
 .radio {
@@ -98,26 +162,71 @@ input {
     flex-direction: row;
     align-items: center;
     align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.radio > span {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 1px solid #ccd0d5;
+    padding: 10px 15px;
+    width: 10rem;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+    background: #fff;
 }
 
 .punto {
-    align-self: center;
+    display: flex;
+    flex-direction: row;
+    height: 15px;
+}
+
+.gender {
+    margin-bottom: 0px;
+    width: 80%;
 }
 
 .buttons {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 50%;
 }   
 
 .button {
     width: 150px;
-    border: 1px solid blue;
+    height: 40px;
+    margin-left: 50px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+}
 
+.button:hover {
+    cursor: pointer;
 }
 
 .error {
     color: red;
     font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.input-error:focus {
+    border: 1px solid red;
+}
+
+select:focus {
+    border-color: #ccd0d5;
+    outline: none;
 }
