@@ -54,9 +54,9 @@ h1, h2 {
 
 .weather {
     width: 100%;
-    height: 250px;
+    height: 400px;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 80px;
 }
 
 .date {
@@ -71,7 +71,7 @@ h1, h2 {
 
 .background {
     width: 100%;
-    height: 250px;
+    height: 400px;
     margin-bottom: 50px;
     position:absolute;
     opacity: 0.9;
@@ -87,8 +87,17 @@ h1, h2 {
     justify-content: center;
     position:absolute;
     z-index: 1;
-
 }
+
+.forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    opacity: 1;
+    font-size: 16px;
+}
+
 
 .articles {
     width: 100%;

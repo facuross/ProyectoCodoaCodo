@@ -77,7 +77,6 @@ header {
     transform: translateX(25%);
     color: #fff;
     font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(35, 12, 241, 0.712);
     font-size: 1.15rem;
     font-family: 'Asap', sans-serif;
 }

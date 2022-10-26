@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap&family=Oswald:wght@500;600;700" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b01e67490c.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Club Deportivo Codo a Codo</title>
 </head>
 
 <body>
@@ -43,7 +43,7 @@
     
 <div class="content">
     <div class="side">
-        <img src="./img/Contacto/descarga1.jfif" alt="">
+        <img src="./img/Contacto/descarga2.jfif" alt="" style="height:800px;">
     </div>
     <form name="form">
         <h1 class="title">¡Contactanos!</h1>
@@ -58,6 +58,21 @@
                 <label for="apellido">Apellido</label> 
                 <input type="text" name="apellido" id="apellido">
                 <span class="lastname-error error"></span>
+            </div>
+        </div>
+        <div class="personal">
+            <div class="email">
+                <label for="email">Correo</label> 
+                <input type="email" name="email" id="email">
+                <span class="email-error error"></span>
+            </div>
+            <div class="phone">
+                <label for="phone">Telefono</label>
+                <div class="ph-number">
+                    <input type="number" name="codigo" id="codigo" placeholder="Cod. área">
+                    <input type="number" name="phone" id="phone" placeholder="Número">
+                </div>
+                <span class="phone-error error"></span>
             </div>
         </div>
         <div class="location">
@@ -104,7 +119,7 @@
             </select>
             <span class="motive-error error"></span>
         </div>
-        <label>Genero</label>
+        <label>Género</label>
         <div class="radio">
             <span>
                 <label class="gender" for="hombre">Hombre</label>
@@ -124,10 +139,17 @@
             <textarea class="mensaje" placeholder="Escribir mensaje..."></textarea>
         </div>
         <div class="buttons">
-            <input class="button" type="reset" style="background-color:#1772EA" value="Limpiar" onclick="limpiar()"></input>
-            <input class="button" type="button" style="background-color:#00B04B" value="Enviar" onclick="validar()"></input>
+            <input id="clean" class="button" type="reset" value="Limpiar" onclick="limpiar()"></input>
+            <input id ="send" class="button" type="button" value="Enviar" onclick="validar()"></input>
         </div>
     </form>
+    <div class="modal">
+        <div class="modal_container">
+            <h1 style="margin-top: 0px">¡Gracias por contactarnos!</h1>
+            <img class="modal-img" src="./img/Contacto/Jugador de fútbol.jfif" alt="jugador de futbol">
+            <p style="margin: 10px 40px 0px; color:#111111;">El personal administrativo del club se estará contactando con usted a la brevedad para resolver su consulta</p>
+        </div>
+    </div>
 </div>
     <footer>
         <div class="footer">

@@ -1,5 +1,6 @@
 const bDay = document.querySelector(".bday")
 
+//creamos los días para el select dia
 for (i=0; i<31; i++){
     const option = document.createElement("option");
     option.textContent = `${i+1}`;
@@ -10,6 +11,7 @@ for (i=0; i<31; i++){
 const month = document.querySelector(".month")
 const months = ["ene", "feb", "mar", "abr", "mar", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
 
+//creamos los meses para el select mes
 for (mes of months) {
     const option = document.createElement("option");
     option.textContent = mes 
@@ -21,7 +23,8 @@ for (mes of months) {
 const year = document.querySelector(".year")
 const date = new Date()
 
-for(i=1930; i<=date.getFullYear(); i++){
+//creamos los años para el select año
+for(i=date.getFullYear(); i>= 1930; i--){
     const option = document.createElement("option")
     option.textContent = `${i}`
 
@@ -32,6 +35,8 @@ for(i=1930; i<=date.getFullYear(); i++){
 function validar(){
     const nameError = document.querySelector(".name-error")
     const lastnameError = document.querySelector(".lastname-error")
+    const emailError = document.querySelector(".email-error")
+    const phoneError = document.querySelector(".phone-error")
     const adressError = document.querySelector(".adress-error")
     const cityError = document.querySelector(".city-error")
     const cpError = document.querySelector(".cp-error")
@@ -40,6 +45,8 @@ function validar(){
 
     nameError.innerHTML = ""
     lastnameError.innerHTML = ""
+    emailError.innerHTML = ""
+    phoneError.innerHTML = ""
     adressError.innerHTML = ""
     cityError.innerHTML = ""
     cpError.innerHTML = ""
@@ -47,7 +54,6 @@ function validar(){
     motiveError.innerHTML = ""
 
     const form = document.getElementsByTagName("form")
-    console.log(form)
 
     for (element of form[0]) {
         element.classList.remove("input-error")
@@ -74,7 +80,59 @@ function validar(){
         document.form.apellido.classList.add("input-error")
         return 0;
     }
-    
+
+    if (document.form.email.value === ""){
+        emailError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>
+                            <p style="margin-left: 5px">El campo correo no puede estar vacio</p>`
+        document.form.email.focus()
+        document.form.email.classList.add("input-error")
+        return 0;
+    }
+
+    function validarCorreo(correo){
+        var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        var esValido = expReg.test(correo)
+        if(esValido) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    if(!validarCorreo(document.form.email.value)){
+        emailError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>
+                            <p style="margin-left: 5px">El correo ingresado no es válido</p>`
+        document.form.email.focus()
+        document.form.email.classList.add("input-error")
+        return 0;
+    }
+
+    if (!document.form.codigo.value) {
+        phoneError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>
+                                <p style="margin-left: 5px">Debe ingresar el codigo de área</p>`
+        document.form.codigo.focus()
+        document.form.codigo.classList.add("input-error")
+        return 0;
+    } else if (document.form.codigo.value.length != 3) {
+        phoneError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>
+                                <p style="margin-left: 5px">El código de área debe tener 3 dígitos</p>`
+        document.form.codigo.focus()
+        document.form.codigo.classList.add("input-error")
+        return 0;
+    } else if (!document.form.phone.value) {
+        phoneError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>
+                                <p style="margin-left: 5px">El campo telefono no puede estar vacío</p>`
+        document.form.phone.focus()
+        document.form.phone.classList.add("input-error")
+        return 0;
+    } else if (document.form.phone.value.length < 6) {
+        phoneError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>
+                                <p style="margin-left: 5px">El campo telefono debe tener al menos 6 dígitos</p>`
+        document.form.phone.focus()
+        document.form.phone.classList.add("input-error")
+        return 0;
+    }
+
     if (document.form.domicilio.value === ""){
         adressError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>
                             <p style="margin-left: 5px">El campo domicilio no puede estar vacio</p>`
@@ -147,6 +205,42 @@ function validar(){
     currentMonth = date.getMonth() + 1
     currentDay = date.getDate()
 
+    if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+        if (bDay.value == 31) {
+            dateError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>
+                                    <p style="margin-left: 5px">La fecha ingresada es incorrecta</p>`
+            bDay.focus()    
+            return 0; 
+        }
+    }
+
+    function añoBisiesto(year) {
+        if(year % 4 === 0 && year % 100 != 0 || year % 4 === 0 && year % 100 === 0 && year % 400 === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    if(mes == 2) {
+        if(añoBisiesto(year.value)) {
+            if(bDay.value > 29) {
+                dateError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>
+                                        <p style="margin-left: 5px">La fecha ingresada es incorrecta</p>`
+                bDay.focus()    
+                return 0;        
+            }
+        }
+        if (!añoBisiesto(year.value)){
+            if(bDay.value > 28) {
+                dateError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i>
+                                        <p style="margin-left: 5px">La fecha ingresada es incorrecta</p>`
+                bDay.focus()    
+                return 0;        
+            }
+        }   
+    }
+
     function getAge() {
         if(mes > currentMonth) {
             return currentYear - year.value - 1
@@ -199,8 +293,25 @@ function validar(){
         return 0;
     }
 
-    document.form.submit();
+
+    function openModal() {
+        const modal = document.querySelector(".modal")
+        modal.classList.add("modal-show");
+    }
+
+    async function enviar(){
+        openModal()
+        return new Promise (resolve => {
+            setTimeout(() => {
+                resolve(document.form.submit()
+                )}, 3000)
+        })
+    }
+
+    enviar();
 }
+
+
 
 function limpiar() {
     location.reload()

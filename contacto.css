@@ -56,7 +56,6 @@ form {
     align-self: center;
     background: rgb(221, 222, 203);
     padding: 20px 5%;
-    border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
 }
 
@@ -70,6 +69,12 @@ div {
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
     margin-bottom: 50px;
+}
+
+.ph-number {
+    display: grid;
+    grid-template-columns: 25% 65%;
+    grid-column-gap: 10%;
 }
 
 .location {
@@ -213,6 +218,26 @@ label {
     cursor: pointer;
 }
 
+#clean {
+    background-color:#1772EA;
+}
+
+#clean:hover {
+    background-color: #fff;
+    color: #1772ea;
+    border: #1772ea 1px solid;
+}
+
+#send {
+    background-color:#00B04B;
+}
+
+#send:hover {
+    background-color: #fff;
+    color: #00B04B;
+    border: #00B04B 1px solid;
+}
+
 .error {
     color: red;
     font-size: 13px;
@@ -229,4 +254,46 @@ label {
 select:focus {
     border-color: #ccd0d5;
     outline: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal-show {
+    opacity: 1;
+    transition: opacity .6s;
+    --transform: translateY(0);
+}
+
+.modal_container {
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    color: #00B04B;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.modal-img {
+    height: 150px;
+    width: 150px;
 }
