@@ -304,7 +304,7 @@ function validar(){
         return new Promise (resolve => {
             setTimeout(() => {
                 resolve(document.form.submit()
-                )}, 3000)
+                )}, 5000)
         })
     }
 
