@@ -182,12 +182,18 @@ const response = fetch('https://api.openweathermap.org/data/2.5/forecast?id=3433
     const img_3 = document.querySelector(".icon-3")
 
     //Asignamos al elemento el día y su temperatura max y min invocando las funciones definidas previamente
+    
+    const fecha = new Date();
+    const mañana = new Date(fecha.getTime() + 24*60*60*1000);
+    const pasadoMañana = new Date(mañana.getTime() + 24*60*60*1000);
+    const pasadoMañana_1 = new Date(pasadoMañana.getTime() + 24*60*60*1000);
+
     dayAfter.textContent = day1
-    dayAfterMinMax.textContent = "Min.:" + " " + getMinTemp(today + 1) + "° " + " " + "Max.:" + " " + getMaxTemp(today + 1) + "°"
+    dayAfterMinMax.textContent = "Min.:" + " " + getMinTemp(mañana.getDate()) + "° " + " " + "Max.:" + " " + getMaxTemp(mañana.getDate()) + "°"
     dayAfter1.textContent = day2
-    dayAfter1MinMax.textContent = "Min.:" + " " + getMinTemp(today + 2) + "° " +  " " + "Max.:" + " " + getMaxTemp(today + 2) + "°"
+    dayAfter1MinMax.textContent = "Min.:" + " " + getMinTemp(pasadoMañana.getDate()) + "° " +  " " + "Max.:" + " " + getMaxTemp(pasadoMañana.getDate()) + "°"
     dayAfter2.textContent = day3
-    dayAfter2MinMax.textContent = "Min.:" + " " + getMinTemp(today + 3) + "°" + " " + "Max.:" + " " + getMaxTemp(today + 3) + "°" 
+    dayAfter2MinMax.textContent = "Min.:" + " " + getMinTemp(pasadoMañana_1.getDate()) + "°" + " " + "Max.:" + " " + getMaxTemp(pasadoMañana_1.getDate()) + "°" 
 
     
     function getWeather(day) {
@@ -222,11 +228,11 @@ const response = fetch('https://api.openweathermap.org/data/2.5/forecast?id=3433
     }
 
     //Asignamos el icono del clima de los días posteriores en función al icono
-    const icon_1 = getWeather(today + 1)
+    const icon_1 = getWeather(mañana.getDate())
     console.log(icon_1)
-    const icon_2 = getWeather(today + 2)
+    const icon_2 = getWeather(pasadoMañana.getDate())
     console.log(icon_2)
-    const icon_3 = getWeather(today + 3)
+    const icon_3 = getWeather(pasadoMañana_1.getDate())
     console.log(icon_3)
 
     if (icon_1.includes('01') || icon_1.includes('02') ) {
