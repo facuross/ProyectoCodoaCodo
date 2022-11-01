@@ -90,9 +90,10 @@ h1, h2 {
 }
 
 .forecast {
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
+    display: grid;
+    grid-template-columns: 15% 15% 50%;
+    grid-gap: 10px;
+    justify-content: center;
     align-items: center;
     opacity: 1;
     font-size: 16px;
